@@ -1,0 +1,178 @@
+.takeAppointment {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.takeAppointment>h1 {
+    font-size: 50px;
+    color: #824a1e;
+    border-bottom: 7px solid #eb7732;
+}
+
+.appointmentContainer {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.calendarContainer {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoContainer {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.currentDay {
+    border-bottom: 5px solid #eb7732;
+    text-align: center;
+    font-size: 22px;
+}
+
+.timeSlotContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeSlotList {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.timeSlot {
+    width: 100%;
+    font-size: 14px;
+    height: 3vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.timeSlotHours,
+.timeSlotButton,
+.timeSlotNoButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeSlotHours {
+    width: 40%;
+    font-size: 18px;
+}
+
+.timeSlotButton {
+    width: 40%;
+    cursor: pointer;
+    background-color: #566E3D;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.timeSlotButton:hover {
+    background-color: #0C4767;
+}
+
+.timeSlotNoButton {
+    width: 40%;
+    background-color: #eb7732;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 810px) {
+
+    .appointmentContainer {
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: initial;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .calendarContainer {
+        width: 90%;
+        height: 50%;
+    }
+
+    .infoContainer {
+        width: 80%;
+        min-height: 250px;
+        gap: 20px;
+    }
+
+    .timeSlotList {
+        gap: 10px;
+    }
+
+    .takeAppointment>h1 {
+        font-size: 0.9rem;
+        margin: 25px 25px;
+    }
+
+    .takeAppointment {
+        flex-direction: column;
+        overflow: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        justify-content: initial;
+        align-items: center;
+    }
+
+    .currentDay {
+        font-size: 0.9rem;
+    }
+
+    .timeSlotHours {
+        font-size: 0.8rem;
+    }
+
+    .react-calendar__navigation {
+        margin: 0;
+    }
+
+
+
+
+}
+
+@media (min-width: 810px) and (max-width: 1300px) {
+
+    .calendarContainer {
+        width: 50%;
+    }
+
+}

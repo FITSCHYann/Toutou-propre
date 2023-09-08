@@ -1,0 +1,106 @@
+.usersContainer,
+.userContainer {
+    width: 60%;
+    height: 500px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.title {
+    height: 10%;
+}
+
+.usersListTitle {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 1px solid red;
+    border-radius: 15px;
+}
+
+.dognameList,
+.lastnameList,
+.firstnameList,
+.phoneList {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.usersList {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    border-bottom: 1px solid red;
+}
+
+.userProfil {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.userContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.backToUsers {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.nextAppointment {
+    width: 50%;
+}
+
+.oldAppointment {
+    padding-top: 20px;
+}
+
+
+@media (max-width: 810px) {
+
+    .usersContainer,
+    .userContainer {
+        font-size: 0.6rem;
+        width: 95%;
+        height: 500px;
+        overflow: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .userProfil,
+    .dognameList,
+    .lastnameList,
+    .firstnameList,
+    .phoneList {
+        min-width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,171 @@
+.userContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.userHeader {
+    width: 60%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.title {
+    height: 20%;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.title>h1 {
+    color: #824a1e;
+    border-bottom: 7px solid #eb7732;
+    font-size: 50px;
+}
+
+.userProfil {
+    width: 50%;
+    height: 100%;
+    border: 7px solid #566E3D;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.nextAppointment {
+    width: 50%;
+    height: 100%;
+    border: 7px solid #566E3D;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.newAppointment,
+.oldAppointment {
+    background-color: #B9A44C;
+    border-radius: 10px;
+    min-height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 5px;
+}
+
+
+.oldAppointment {
+    background-color: #FE9920;
+}
+
+.newAppointment {
+    background-color: #B9A44C;
+}
+
+.dateAppointment {
+    width: 50%;
+}
+
+.hoursAppointment {
+    width: 30%;
+}
+
+.oldAppointmentContainer {
+    border: 7px solid #eb7732;
+    border-radius: 20px;
+    width: 35%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding: 5px;
+}
+
+.backToUsers {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+@media (max-width: 810px) {
+
+    .userContainer {
+        width: 100%;
+        overflow: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        justify-content: initial
+    }
+
+    .title {
+        min-height: 150px;
+        width: 95%;
+    }
+
+    .title>h1 {
+        font-size: 2rem;
+    }
+
+    .userProfil {
+        width: 95%;
+    }
+
+    .nextAppointment {
+        width: 95%;
+        min-height: 400px;
+    }
+
+    .userHeader {
+        width: 100%;
+        height: 900px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .oldAppointmentContainer {
+        min-height: 400px;
+        width: 95%;
+    }
+
+    .backToUsers {
+        top: 10px;
+        right: 10px;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+}

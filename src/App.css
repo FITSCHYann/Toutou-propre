@@ -1,38 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../public/fond.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+    width: 95%;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo-container {
+    width: 12%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo-appointment {
+    width: 20%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.logo-text {
+    position: absolute;
+    color: #824a1e;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo-text:hover {
+    font-size: 0.9em;
+}
+
+.logo {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.welcome {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.disconect {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu {
+    width: 88%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    position: relative;
+}
+
+.nav-bar {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 75px;
+
+}
+
+.link,
+.link-active {
+    text-decoration: none;
+    color: #824a1e;
+    font-size: 16px;
+    transition: color 0.3s;
+    border: 5px solid transparent;
+}
+
+.link-active {
+    border-bottom: 5px solid #eb7732;
+    transition: color 0.3s;
+}
+
+.link:hover {
+    border-bottom: 5px solid #eb7732;
+    color: #824a1e;
+    transition: color 0.3s;
+}
+
+.link:focus {
+    color: #333;
+    border-bottom: 5px solid #eb7732;
+}
+
+
+.appointment {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    box-shadow: 12px 12px 2px 1px #C9C8F030;
+    width: 95%;
+    height: 70vh;
+    background-color: #FFEFEF80;
+    background-image: url("../public/back-login.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-signIn {
+    width: 10vw;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.footer {
+    width: 95%;
+    height: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuOpen {
+    padding: 0.5em 0em 0.5em 0.5em;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    top: 1.5em;
+    font-size: 1.5em;
+    gap: 1px;
+    z-index: 1000;
+    background-color: #ffd2af;
+    border-radius: 15px;
+    border: 2px solid #566E3D;
+}
+
+.menuMobile {
+    width: 100%;
+    height: 27px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9em;
+    position: relative;
+
+}
+
+.button {
+    width: 27px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    background-color: #824a1e;
+    border-radius: 10px;
+    height: 3px;
+}
+
+.bar1,
+.bar3 {
+    width: 25px;
+    transform: rotate(0deg) translate(0em, 0em);
+    transition: ease-out 0.5s;
+}
+
+.bar2 {
+    width: 15px;
+    opacity: 100;
+    animation: opacite 2s forwards;
+}
+
+
+/* Animations  */
+
+.bar1-open,
+.bar3-open {
+    background-color: #824a1e;
+    border-radius: 20px;
+    width: 25px;
+    height: 3px;
+}
+
+.bar1-open {
+    transform: rotate(45deg) translate(0.3em, 0.35em);
+    transition: ease-out 0.5s;
+}
+
+.bar2-open {
+    display: none;
+}
+
+.bar3-open {
+    transform: rotate(-45deg) translate(0.3em, -0.35em);
+    transition: ease-out 0.5s;
+}
+
+@media (max-width: 810px) {
+
+    .welcome {
+        width: 60%;
+        font-size: 0.6rem;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .logo-appointment {
+        width: 35%;
+    }
+
+    .logo-text {
+        font-size: 0.6em;
+    }
+
+    .logo-container {
+        width: 25%
+    }
+
+    .menu {
+        width: 70%;
+
+    }
+
+
 }

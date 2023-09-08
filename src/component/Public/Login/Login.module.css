@@ -1,0 +1,169 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.container>h2 {
+    font-size: 50px;
+    color: #824a1e;
+    border-bottom: 7px solid #eb7732;
+}
+
+
+.loginContainer {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.loginPicture {
+    height: 100%;
+    min-width: 20%;
+    border-radius: 20px;
+    background-size: cover;
+    background-attachment: fixed;
+    object-fit: cover;
+    border: 7px solid #566E3D;
+    padding: 10px;
+}
+
+.login {
+    height: 100%;
+    width: 30%;
+    border: 7px solid #566E3D;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100px;
+    gap: 5px;
+
+}
+
+.label {
+    height: 30px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #824a1e;
+}
+
+.input {
+    all: unset;
+    border: 3px solid #566E3D;
+    border-radius: 7px;
+    height: 40px;
+    text-indent: 20px
+}
+
+.input:focus {
+    border: 3px solid #B9A44C;
+}
+
+.input::placeholder {
+    color: #824a1e;
+    font-size: 1rem;
+}
+
+.error {
+    height: 20px;
+    color: #eb7732;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button {
+    all: unset;
+    width: 175px;
+    min-height: 50px;
+    background-color: #566E3D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.button:hover {
+    background-color: #0C4767;
+}
+
+.toSubscription {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+@media (max-width: 810px) {
+
+    .loginContainer {
+        flex-direction: column;
+        height: 80%;
+
+    }
+
+    .container {
+        overflow: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        gap: 30px;
+    }
+
+    .loginPicture {
+        display: none;
+    }
+
+    .login {
+        width: 95%;
+    }
+
+    .container>h2 {
+        font-size: 1.2rem;
+    }
+
+    .label {
+        font-size: 0.9rem;
+        height: initial;
+    }
+
+    .form {
+        height: 150px;
+    }
+
+    .button {
+        font-size: 0.8rem;
+    }
+
+    .toSubscription {
+        font-size: 0.8rem;
+    }
+
+}

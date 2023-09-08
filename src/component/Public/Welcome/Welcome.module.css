@@ -1,0 +1,16 @@
+.welcomeContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcomePicture {
+    height: 60%;
+    min-width: 20%;
+    border-radius: 20px;
+    background-size: cover;
+    background-attachment: fixed;
+    object-fit: cover;
+}

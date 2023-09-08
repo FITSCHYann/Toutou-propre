@@ -1,0 +1,123 @@
+.myAppointmentContainer {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.nextAppointmentContainer,
+.oldAppointmentContainer {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    color: #824a1e;
+    padding: 3em;
+}
+
+.nextAppointmentContainer {
+    border: 7px solid #566E3D;
+    border-radius: 20px;
+
+}
+
+.oldAppointmentContainer {
+    border: 7px solid #eb7732;
+    border-radius: 20px;
+}
+
+.oldAppointmentContainer>h2 {
+    color: #824a1e;
+    border-bottom: 7px solid #eb7732;
+    width: 100%;
+}
+
+.nextAppointmentContainer>h2 {
+    color: #824a1e;
+    border-bottom: 7px solid #566E3D;
+    width: 100%;
+}
+
+.listAppointments {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.oldAppointment {
+    min-height: 50px;
+    background-color: #FE9920;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.newAppointment {
+    min-height: 50px;
+    background-color: #B9A44C;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.dateAppointment,
+.hoursAppointment {
+    width: 45%;
+    padding-left: 20px;
+}
+
+@media (max-width: 810px) {
+
+    .myAppointmentContainer {
+        width: 95%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        justify-content: initial;
+    }
+
+    .nextAppointmentContainer,
+    .oldAppointmentContainer {
+        width: 100%;
+        min-height: 370px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 50px;
+        color: #824a1e;
+        padding: 10px;
+    }
+
+    .oldAppointmentContainer>h2,
+    .nextAppointmentContainer>h2 {
+        font-size: 0.9rem;
+    }
+
+    .oldAppointment,
+    .newAppointment {
+        min-height: 50px;
+        width: 100%;
+        font-size: 0.8rem;
+    }
+
+
+}
